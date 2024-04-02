@@ -6,7 +6,7 @@ const AddUserPage = () => {
     <div className={styles.container}>
       <form action={addUser} className={styles.form}>
         <input type="text" placeholder='title' name='title' required/>
-        <textarea name="desc" id="desc" rows={10} placeholder='Address'></textarea>
+        <textarea name="desc" id="desc" rows={10} placeholder='Description'></textarea>
         <button type='submit' className={styles.button}>Submit</button>
       </form>
     </div>
