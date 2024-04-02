@@ -19,7 +19,7 @@ const Users = async ({
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <Search placeholder="Search for a user..." />
+        <Search placeholder="Search..." />
         <Link href="/dashboard/information/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
