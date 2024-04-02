@@ -8,6 +8,8 @@ import { RiCodeView } from "react-icons/ri";
 import styles from "./sidebar.module.css";
 import MenuLink from "./menuLink/menuLink";
 import Image from "next/image";
+import { MdVideoLibrary } from "react-icons/md";
+
 interface MenuItem {
   title: string;
   list: SubMenuItem[];
@@ -32,6 +34,11 @@ const Sidebar = () => {
           title: "Information",
           path: "/dashboard/information",
           icon: <RiCodeView />,
+        },
+        {
+          title: "Videos",
+          path: "/dashboard/videos",
+          icon: <MdVideoLibrary />,
         },
       ],
     },

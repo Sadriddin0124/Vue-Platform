@@ -2,6 +2,9 @@
 import React from "react";
 import styles from "./pagination.module.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const Pagination = ({ count }: { count: number | undefined }) => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -17,10 +20,13 @@ const Pagination = ({ count }: { count: number | undefined }) => {
   }
   return (
     <div className={styles.container}>
-      <button className={styles.button} disabled={!hasPrev} onClick={()=>handleChangePage("prev")}>
-        Previous
-      </button>
-      <button className={styles.button} disabled={!hasNext} onClick={()=>handleChangePage("next")}>Next</button>
+      <IconButton aria-label="delete" disabled={!hasPrev} onClick={()=>handleChangePage("prev")}>
+        <ArrowBackIosIcon className="text-white"/>
+      </IconButton>
+      <h1 className="text-[26px]">{page}</h1>
+      <IconButton aria-label="delete" disabled={!hasNext} onClick={()=>handleChangePage("next")}>
+        <ArrowForwardIosIcon className="text-white"/>
+      </IconButton>
     </div>
   );
 };

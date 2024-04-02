@@ -13,7 +13,7 @@ const SingleUserPage = async ({ params }: { params: { id: string } }) => {
         <form action={updateUser} className={styles.form}>
           <input hidden type="text" name="id" value={user?.id} />
           <label>Title</label>
-          <input type="text" value={user?.title} name="title" />
+          <input type="text" defaultValue={user?.title} name="title" />
           <label>Description</label>
           <textarea
             name="desc"
